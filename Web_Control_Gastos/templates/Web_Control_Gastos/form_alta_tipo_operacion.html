@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!--Llamare a la vista mostrar_datos pasandole 2 parámetros-->
+    <!--1) name = tipo_operacion_name-->
+    <!--2) name = desc -->
+    <form action="{% url 'mostrar_datos' %}" method="get">
+
+        <ul>
+            <li>
+                <!--Notar que el valor del campo for del label y el campo id del input coinciden-->
+                <label for="name">Nombre:</label>
+                <input type="text" id="name" name="tipo_operacion_name" value="Esto es un texto por default">
+            </li>
+            
+            <li>
+                <label for="descripcion">Descripción:</label>
+                <textarea name="tipo_operacion_descripcion" id="desc">Esto es un texto por default</textarea>
+            </li>
+
+            <li class="button">
+                <button type="submit">Guardar</button>
+            </li>
+
+        </ul>
+
+    </form>
+    
+</body>
+</html>
